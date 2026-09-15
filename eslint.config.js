@@ -1,5 +1,5 @@
 import js from "@eslint/js";
-import importPlugin from "eslint-plugin-import";
+import importPlugin from "eslint-plugin-import-x";
 import prettier from "eslint-plugin-prettier/recommended";
 import pluginPromise from "eslint-plugin-promise";
 import globals from "globals";
@@ -36,12 +36,12 @@ export default [
   importPlugin.flatConfigs.recommended,
   {
     rules: {
-      "import/no-unresolved": "off",
-      "import/named": "off",
-      "import/namespace": "off",
-      "import/default": "off",
-      "import/no-named-as-default-member": "off",
-      "import/order": [
+      "import-x/no-unresolved": "off",
+      "import-x/named": "off",
+      "import-x/namespace": "off",
+      "import-x/default": "off",
+      "import-x/no-named-as-default-member": "off",
+      "import-x/order": [
         "warn",
         {
           "newlines-between": "always",

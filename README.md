@@ -32,6 +32,34 @@ registry.set("numcodecs.gribscan.rawgrib", async () => GribscanRawGribCodec);
 registry.set("numcodecs.log_bins", async () => LogBinsCodec);
 ```
 
+### Individual codec imports
+
+Each codec also has its own entry point, so you can load it without importing
+the other codecs:
+
+```ts
+import { Blosc2Codec } from "codecita/blosc2";
+import { Fletcher32Codec } from "codecita/fletcher32";
+import { GribscanRawGribCodec } from "codecita/gribscan";
+import { LogBinsCodec } from "codecita/logBins";
+```
+
+The `blosc2` entry point requires `zarrita` at runtime. The other codec entry
+points do not import `zarrita` at runtime.
+
+### Lazy registration
+
+Use a dynamic import to load a codec when zarrita requests it:
+
+```ts
+import { registry } from "zarrita";
+
+registry.set(
+  "numcodecs.fletcher32",
+  async () => (await import("codecita/fletcher32")).Fletcher32Codec
+);
+```
+
 ## Development
 
 ### Scripts
