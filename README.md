@@ -9,7 +9,7 @@ Zarrita-compatible codec implementations shared across projects:
 - `GribscanRawGribCodec` — `numcodecs.gribscan.rawgrib` raw GRIB1/GRIB2 decoder
 - `LogBinsCodec` — `numcodecs.log_bins` array-to-array quantization codec
 
-Only decoding is implemented; `encode()` throws for every codec.
+Only decoding (reading) is implemented; write-operations via encode() are currently not supported.
 
 ## Usage
 
