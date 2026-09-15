@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.3](https://github.com/Karinon/codecita/compare/v0.1.2...v0.1.3) (2026-09-15)
+
+
+### Miscellaneous Chores
+
+* more tests with publishing ([22dd7b5](https://github.com/Karinon/codecita/commit/22dd7b517b662332c49ab47893c1c3eada231adb))
+
 ## [0.1.2](https://github.com/Karinon/codecita/compare/v0.1.1...v0.1.2) (2026-09-15)
 
 
